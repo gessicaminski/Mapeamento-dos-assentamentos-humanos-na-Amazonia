@@ -1,0 +1,22 @@
+cr1;cr;q;s
+CSAR;1 Camada- sem área Rural;2534;B
+NA;Sem Classificação;1910;1CSAR
+SD;Sem Destinação;288;1CSAR
+PI;Proteção Integral;144;1CSAR
+US;Uso Sustentável;101;1CSAR
+U;Urbanizado;52;1CSAR
+AS;Assentamento;24;1CSAR
+MI;Militar;5;1CSAR
+OU;Outros Usos;4;1CSAR
+TIH;Terra Índigena Homologada;4;1CSAR
+Q;Quilombola;2;1CSAR
+CSAR2;2 Camadas-Sem Área Rural;296;2CSAR
+CAR;1 Camada-somete de área Rural;2182;C
+MF;Minifúndio;383;1CR
+P;Pequena Propriedade Rural;575;1CR
+M;Média Propriedade Rural;367;1CR
+G;Grande Propriedade Rural;857;1CR
+CR1;2-4 Camadas sobreepostas que contém  uma camada rural;1160;CS1CR
+CR2;2-5 Camadas sobrepostas que contém duas camadas rurais;508;CS2CR
+CR3;3-5 Camadas sobrepostas que contém três camadas rurais;45;CS3CR
+TOT;Total;3895;H
