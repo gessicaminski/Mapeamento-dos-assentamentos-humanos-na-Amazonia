@@ -1,0 +1,4 @@
+
+Um dos  objetivos do projeto é: 1) o levantamento e organização dos dados arqueológicos e geográficos disponíveis para a Amazônia; 
+
+Para isso foi utilizado as tabelas fornecidas pela Amazon Arch, em que esses dados foram organizados e posteriormente desenvolvido um codigo idetificador unico para cada sitio. Esse codigo foi feito no R, com objetivo de ser utilizado futuramente para implementação no site da Amazon e ser utilizado para gerar o codigo automaticamente para todos os sitios.
