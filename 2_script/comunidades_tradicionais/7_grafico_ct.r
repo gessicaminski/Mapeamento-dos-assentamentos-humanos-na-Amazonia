@@ -50,7 +50,7 @@ ggplot(s, aes(fill=modalidades, y=porc, x=est)) +
 #grafico sobreposição
 todos<- data.frame( x=c('0','1','2','3','4', '5','6'),
                     classificação=c('0','1','2','3','4', '5','6'), 
-                    quantidade = c(293694,363692,261156,108370,29892,2048,107))
+                    quantidade = c(263694,363692,261156,108370,29892,2048,107))
 
 
 todos$porc<- (todos$quantidade *100)/ (1147974)
@@ -93,26 +93,28 @@ dat$q <- as.numeric(dat$q)
 #maiscula
 dat$c<- toupper(dat$c) 
 
-dat$c<- factor(dat$c,levels = c("SD" ,    "SDMF" ,  "SDMFP",  "SDP",    "SDPM",   "SDM",    "SDMG" ,  "SDG",   
-                                "SDAS",   "SDASMF", "SDQ",    "SDQMF",  "SDTH",   "SDTHMF", "SDU",    "SDUG" ))
+dat$c<- factor(dat$c,levels = c("SD" ,    "SDMF" ,  "SDMFPMG",  "SDP",    "SDPMFPMG",   "SDM",    "SDMG" ,  "SDG",   
+                                "SDAS",   "SDASMFPMG", "SDQ",    "SDQMFPMG",  "SDTH",   "SDTHMFP", "SDU",    "SDUMFPG" ))
 
-
+           
+       
 dat$c1<- factor(dat$c1,levels = c("Sem Destinação (SD)",                                
                                   "SD e Minifúndio" ,                                   
-                                  "SD, Minifúndio e Pequena Propriedade Rural",               
+                                  "SD, Minifúndio + Propriedades Rurais",               
                                   "SD e Pequena Propriedade Rural" ,                    
-                                  "SD, Pequena e Média Propriedade Rural" ,                 
+                                  "SD, Pequena + Propriedades Rurais" ,                 
                                   "SD e Média Propriedade Rural" ,                      
                                   "SD, Média e Grande Propriedade Rural" ,
                                   "SD e Grande Propriedade Rural" ,  
                                   "SD e Assentamento" ,                                 
-                                  "SD, Assentamento e Minifúndio" ,           
+                                  "SD, Assentamento + Propriedades Rurais" ,           
                                   "SD e Quilombola"  ,                                  
-                                  "SD, Quilombola e Minifúndio",              
-                                  "SD e Terra Índigena Homologada",                     
-                                  "SD,Terra Índigena Homologada e Minifúndio",
+                                  "SD, Quilombola + Propriedades Rurais",              
+                                  "SD e Terra Indígena Homologada",                     
+                                  "SD,Terra Indígena Homologada + Propriedades Rurais",
                                   "SD e Zona Urbana"  ,                                  
-                                  "SD, Zona Urbana e Grande Propriedade Rural" ))                             
+                                  "SD, Zona Urbana + Propriedades Rurais" ))                             
+                          
 
 cbp1 <- c("mediumpurple4","khaki1","khaki3", "gold1", "gold3", "goldenrod","goldenrod4",
           "gold4", "mediumorchid1", "mediumorchid4", "orange","orange3","maroon3", "maroon4",
