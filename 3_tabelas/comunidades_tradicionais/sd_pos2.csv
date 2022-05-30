@@ -1,20 +1,17 @@
-c;c1;q
-sd;Sem DestinaÃ§Ã£o (SD);16612
-sdmf;SD e MinifÃºndio;6692
-sdmfpmg;SD, MinifÃºndio + Propriedades Rurais;1290
-sdp;SD e Pequena Propriedade Rural;4210
-sdpmfpmg;SD, Pequena + Propriedades Rurais;404
-sdm;SD e MÃ©dia Propriedade Rural;1241
-sdmg;SD, MÃ©dia e Grande Propriedade Rural;110
-sdg;SD e Grande Propriedade Rural;2395
-sdas;SD e Assentamento;85
-sdasmfpmg;SD, Assentamento + Propriedades Rurais;1021
-sdq;SD e Quilombola;20
-sdqmfpmg;SD, Quilombola + Propriedades Rurais;123
-sdth;SD e Terra IndÃ­gena Homologada;23
-sdthmfp;SD,Terra IndÃ­gena Homologada + Propriedades Rurais;5
-sdu;SD e Zona Urbana;131
-sdumfpg;SD, Zona Urbana + Propriedades Rurais;10
-
-
-
+"","c","c1","q","porc","porc2","porc0"
+"1","sd","Sem Destinação (SD)",16612,1.61444722287283,1.61,2
+"2","sdmf","SD e Minifúndio",6692,0.650366049570488,0.65,1
+"3","sdmfpr","SD, Minifúndio + Propriedades Rurais",1290,0.125369426770163,0.13,0
+"4","sdp","SD e Pequena Propriedade Rural",4210,0.409151385040609,0.41,0
+"5","sdppr","SD, Pequena + Propriedades Rurais",404,0.0392629832675549,0.04,0
+"6","sdm","SD e Média Propriedade Rural",1241,0.12060733226494,0.12,0
+"7","sdmpr","SD, Média + Propriedades Rurais",110,0.0106904162362154,0.01,0
+"8","sdg","SD e Grande Propriedade Rural",2395,0.232759517143054,0.23,0
+"9","sdas","SD e Assentamento",85,0.00826077618253011,0.01,0
+"10","sdaspr","SD, Assentamento  + Propriedades Rurais",1021,0.0992264997925087,0.1,0
+"11","sdq","SD e Quilombola",20,0.00194371204294826,0,0
+"12","sdqpr","SD, Quilombola  + Propriedades Rurais",123,0.0119538290641318,0.01,0
+"13","sdth","SD e Terra Índigena Homologada",23,0.0022352688493905,0,0
+"14","sdthpr","SD,Terra Índigena Homologada  + Propriedades Rurais",5,0.000485928010737065,0,0
+"15","sdu","SD e Urbanizada",131,0.0127313138813111,0.01,0
+"16","sdupr","SD, Urbanizada + Propriedades Rurais",10,0.000971856021474131,0,0
