@@ -16,10 +16,10 @@ cbp1 <- c("darksalmon","violetred4","brown2" ,  "violetred1","firebrick",
 
 s$est2<- factor(s$est,levels = c("AC", "AM", "AP", "MA", "MT","PA","RR","RO","TO",'AML'))
 
-s$modalidades<- factor(s$modalidades,levels = c( "Homologada","NÃ£o Homologada","Interditada","Dominial", "Reserva IndÃ­gena",
-                                         "ProteÃ§Ã£o Integral", "Uso SustentÃ¡vel", "Militar","Outros Usos","Sem DestinaÃ§Ã£o",
-                                         "Assentamento ", "Quilombola","Urbanizada","Rural-MinifÃºndio","Rural-Pequena",       
-                                         "Rural-MÃ©dia",  "Rural-Grande", "Sem ClassificaÃ§Ã£o"))
+s$modalidades<- factor(s$modalidades,levels = c( "Homologada","Não Homologada","Interditada","Dominial", "Reserva Indígena",
+                                         "Proteção Integral", "Uso Sustentável", "Militar","Outros Usos","Sem Destinação",
+                                         "Assentamento ", "Quilombola","Urbanizada","Rural-Minifúndio","Rural-Pequena",       
+                                         "Rural-Média",  "Rural-Grande", "Sem Classificação"))
 
 
 ac<-s[s$est =="AML",]
@@ -37,22 +37,22 @@ ggplot(s, aes(fill=modalidades, y=porc, x=est2)) +
   geom_bar(position="stack", stat="identity")+
   #geom_text(aes(label=quantidade), vjust=0, size=2.5) +
   # scale_color_brewer(palette = "Dark2")+
-  # scale_fill_discrete(name = "ClassificaÃ§Ã£o do Uso do Solo")+
-  scale_fill_manual(values = cbp1, name = "ClassificaÃ§Ã£o do Uso da terra")+
+  # scale_fill_discrete(name = "Classificação do uso do Solo")+
+  scale_fill_manual(values = cbp1, name = "Classificação do Uso da terra")+
   
   
-  labs(title = "LocalizaÃ§Ã£o dos Assentamentos Humanos PrÃ©-Colombianos na AmazÃ´nia Legal"  )+
+  labs(title = "Localização dos Sítios Arqueológicos na Amazônia Legal"  )+
   theme(plot.title = element_text(hjust= 0.5, size=12)) +
   
   ##theme(axis.text.x=element_text(size=rel(1), angle=90))+
   xlab("")+
-  ylab("% Assentamentos Humanos PrÃ©-Colombianos ")+
+  ylab("% Assentamentos Humanos Pré-Colombianos ")+
   ggsave("classificacao_estado_sa.png")
 
 
-#grafico sobreposiÃ§Ã£o
+#grafico sobreposição
 todos<- data.frame( x=c('0','1','2','3','4', '5'),
-                    classificaÃ§Ã£o=c('0','1','2','3','4', '5'), 
+                    classificação=c('0','1','2','3','4', '5'), 
                     quantidade = c(1910,2806,1123,669,197,20))
 
 todos$porc<- (todos$quantidade *100)/ (6725)
@@ -65,22 +65,22 @@ cbp1 <- c("#FDD0A2" ,"#FDAE6B", "#FD8D3C", "#F16913",
       "#D94801", "#A63603", "#7F2704")
           
 #quantidade
-ggplot(todos, aes(fill=classificaÃ§Ã£o, y=quantidade, x=x)) + 
+ggplot(todos, aes(fill=classificação, y=quantidade, x=x)) + 
   geom_bar(position="dodge", stat="identity")+
   geom_text(aes(label=quantidade), vjust=0) +
-  scale_fill_manual(values = cbp1, name = "Camadas do Uso da terra")+
+  scale_fill_manual(values = cbp1, name = "Camadas do uso da terra")+
   
   
-  labs(title = "SobreposiÃ§Ã£o dos Assentamentos Humanos PrÃ©-Colombianos na AmazÃ´nia Legal"  )+
+  labs(title = "Sobreposição dos Sítios Arqueológicos na Amazônia Legal"  )+
   theme(plot.title = element_text(hjust= 0.5, size=12)) +
   xlab("")+
-  ylab("Assentamentos PrÃ©-Colombianos")  +
+  ylab("Sítios Arqueológicos")  +
   ggsave("sobreposicao_sa.png")
 
 
 
 
-## sem destinaÃ§Ã£o 
+## sem destinação 
 setwd("C:/Users/gessi/Downloads/estagio-docs/")
 dat <- read.csv("semdestinacao_sa.csv", sep = ";", dec = ".")
 Encoding(dat$c1) <- "UTF-8"
@@ -95,18 +95,18 @@ dat$c<- factor(dat$c,levels = c("SD","SDMF","SDMFP","SDMFM",
                                 "SDTNH", "SDU" ))
    
 
-dat$c1<- factor(dat$c1,levels = c("Sem DestinaÃ§Ã£o (SD)",
-                                 "SD e MinifÃºndio",
-                                 "SD, MinifÃºndio e Pequena Propriedade Rural",
-                                 "SD, MinifÃºndio e MÃ©dia Propriedade Rural",
+dat$c1<- factor(dat$c1,levels = c("Sem Destinação (SD)",
+                                 "SD e Minifúndio",
+                                 "SD, Minifúndio e Pequena Propriedade Rural",
+                                 "SD, Minifúndio e Média Propriedade Rural",
                                 "SD e Pequena Propriedade Rural",
-                                 "SD, Pequena e MÃ©dia Propriedade Rural",
+                                 "SD, Pequena e Média Propriedade Rural",
                                  "SD, Pequena e Grande Propriedade Rural",
-                                  "SD e MÃ©dia Propriedade Rural",
-                                "SD, MÃ©dia e Grande Propriedade Rural",
+                                  "SD e Média Propriedade Rural",
+                                "SD, Média e Grande Propriedade Rural",
                                   "SD e Grande Propriedade Rural",
                                  "SD e Assentamento",
-                                  "SD e Terra Ãndigena NÃ£o Homologada",
+                                  "SD e Terra Índigena Não Homologada",
                                 "SD e Zona Urbana"))
         
   cbp1 <- c("mediumpurple4","khaki1","khaki3","khaki4", "gold1","gold2", "gold3", "goldenrod",
@@ -117,14 +117,14 @@ dat$c1<- factor(dat$c1,levels = c("Sem DestinaÃ§Ã£o (SD)",
 ggplot(dat, aes(fill=c1, y=q, x= c)) + 
   geom_bar(position="dodge", stat="identity")+
   geom_text(aes(label=q, vjust =0)) +
-  scale_fill_manual(values = cbp1, name = "ClassificaÃ§Ã£o do Uso da terra")+
+  scale_fill_manual(values = cbp1, name = "Classificação do uso da terra")+
   
   
-  labs(title = "Assentamentos PrÃ©-colombianos em Ã¡reas Sem DestinaÃ§Ã£o")+
+  labs(title = "Sítios Arqueológicos em áreas Sem Destinação")+
   theme(plot.title = element_text(hjust= 0.5, size=12)) +
   theme(axis.text.x=element_text(size=rel(1.5), angle=90))+
   xlab("Camadas do Uso da terra")+
-  ylab("Quantidade de Assentamentos ")
+  ylab("Quantidade de Sítios Arqueológicos ")
 
 +
   ggsave("semdestinacao_sa.png")
@@ -141,24 +141,24 @@ datt <- datt[-c(1,13), ]
 
 datt$s<- factor(datt$s,levels = c("1CSAR","2CSAR","1CR","CS1CR","CS2CR","CS3CR"))
 
-datt$cr<- factor(datt$cr,levels = c("Sem ClassificaÃ§Ã£o",                                     
- "Sem DestinaÃ§Ã£o",                                        
-"ProteÃ§Ã£o Integral",                                     
- "Uso SustentÃ¡vel",                                       
+datt$cr<- factor(datt$cr,levels = c("Sem Classificação",                                     
+ "Sem Destinação",                                        
+"Proteção Integral",                                     
+ "Uso Sustentável",                                       
 "Urbanizado",                                            
  "Assentamento",                                          
 "Militar" ,                                              
 "Outros Usos",                                           
- "Terra Ãndigena Homologada" ,                            
+ "Terra Índigena Homologada" ,                            
  "Quilombola"  ,                                          
- "2 Camadas-Sem Ãrea Rural" ,                             
- "MinifÃºndio" ,                                           
+ "2 Camadas-Sem Área Rural" ,                             
+ "Minifúndio" ,                                           
  "Pequena Propriedade Rural",                             
- "MÃ©dia Propriedade Rural" ,                              
+ "Média Propriedade Rural" ,                              
  "Grande Propriedade Rural" ,                             
- "2-4 Camadas sobreepostas que contÃ©m  uma camada rural" ,
- "2-5 Camadas sobrepostas que contÃ©m duas camadas rurais",
- "3-5 Camadas sobrepostas que contÃ©m trÃªs camadas rurais"))
+ "2-4 Camadas sobreepostas que contém  uma camada rural" ,
+ "2-5 Camadas sobrepostas que contém duas camadas rurais",
+ "3-5 Camadas sobrepostas que contém três camadas rurais"))
 
 cbp1 <- c("blue","mediumpurple4","chartreuse","lightseagreen",
           "gray","rosybrown","darkgreen","red","darksalmon", "darkorange3","palegreen2",
@@ -170,10 +170,10 @@ ggplot(datt, aes(fill=cr, y=q, x= s)) +
   #geom_text(aes(label= sum(q, vjust =0)) +
  # geom_text(aes(label=q), size = 2, hjust = 0.5, vjust = 3, position =     "stack") +
   #geom_text(aes(label=q),size = 3, position = position_stack(vjust = 0.5))+   
-  scale_fill_manual(values = cbp1, name = "ClassificaÃ§Ã£o do Uso da terra")+
+  scale_fill_manual(values = cbp1, name = "Classificação do uso da terra")+
   
   
-  labs(title = "DistribuiÃ§ao dos Assentamentos PrÃ©-colombianos na AmazÃ´nia Legal")+
+  labs(title = "Distribuiçao dos Sítios Arqueológicos na Amazônia Legal")+
   theme(plot.title = element_text(hjust= 0.5, size=12)) +
  # theme(axis.text.x=element_text(size=rel(1.5), angle=90))+
   xlab("Camadas do Uso da terra")+
@@ -182,10 +182,55 @@ ggplot(datt, aes(fill=cr, y=q, x= s)) +
 +
   ggsave("geral_rural_sa.png")
 
+##comunidades indigenas 
+dat <- read.csv("indigena_sa.csv", sep = ",", dec = ".")
+sum(dat$q)
+#$c1 <- as.character (dat$c1)
+#Encoding(dat$c1) <- "UTF-8"
+#dat$q <- as.numeric(dat$q)
 
 
-##comuidades indigenas 
-setwd("C:/Users/gessi/Downloads/estagio-docs/") #diretÃ³rio que eu quero uilizar
+#maiscula
+dat$c<- toupper(dat$c) 
+
+dat$c<- factor(dat$c,levels = c( "TH"  ,     "THUS"  ,   "THUSG" ,   "TNHUS"  ,  "TNHASUSM",
+                                 "TNHPI" ,   "TNHUSMG" , "TNHSD"    ))
+
+
+
+dat$c1<- factor(dat$c1,levels = c( "Terra Indígena Homologada (TH)",
+                                   "TH e Uso Sustentável",                                        
+                                   "TH,Uso Sustentável e Grande Propriedade Rural",               
+                                   "Terra Indígena Não Homologada (TNH) e Uso Sustentável",       
+                                   "TNH, Assentamento, Uso Sustentável e Média Propriedade Rural",
+                                    "TNH e Proteção Integral " ,                                  
+                                   "TNH e Propriedades Rurais",                                   
+                                   "TNH e Sem Destinação"  ))                             
+
+cbp1 <- c("darksalmon","lightcoral","maroon", 
+          "magenta3", "plum4", "purple1","orchid3",
+          "plum3")
+
+ggplot(dat, aes(fill=c1, y=q, x= c)) + 
+  geom_bar(position="dodge", stat="identity")+
+  geom_text(aes(label=q, vjust =0, size=1)) +
+  scale_fill_manual(values = cbp1, name = "Classificação do uso do solo")+
+  
+  
+  labs(title = "Sítios Arqueológicos em Terras Indígenas")+
+  theme(plot.title = element_text(hjust= 0.5, size=12)) +
+  theme(axis.text.x=element_text(size=rel(1), angle=90))+
+  xlab("")+
+  ylab("Quantidade de Sítios Arqueológicos ")
+
++
+  ggsave("indigena.png")
+
+
+
+
+##comunidades indigenas 2- nao usei
+setwd("C:/Users/gessi/Downloads/estagio-docs/") #diretório que eu quero uilizar
 pos1 <- read.csv("aml_geral_sa.csv", sep = ";", dec = ".") 
 pos1 <- pos1[-c(6:18), ]
 
@@ -194,10 +239,10 @@ cbp1 <- c("darksalmon","violetred4","tan4" ,  "violetred1","firebrick")
 ggplot(pos1, aes(fill=modalidade, y=quantidade, x= modalidade)) + 
   geom_bar(position="dodge", stat="identity")+
   geom_text(aes(label=quantidade, vjust =0)) +
-  scale_fill_manual(values = cbp1, name = "ClassificaÃ§Ã£o do Uso da terra")+
+  scale_fill_manual(values = cbp1, name = "Classificação do uso da terra")+
   
   
-  labs(title = "Assentamentos PrÃ©-colombianos em Terras Ãndigenas")+
+  labs(title = "Sítios Arqueológicos em Terras Índigenas")+
   theme(plot.title = element_text(hjust= 0.5, size=12)) +
   theme(axis.text.x=element_text(size=rel(1), angle=90))+
   xlab("")+
