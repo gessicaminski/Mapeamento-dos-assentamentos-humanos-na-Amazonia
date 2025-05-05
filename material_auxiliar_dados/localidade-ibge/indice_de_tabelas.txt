@@ -1,0 +1,15 @@
+Plano tabular sobre os estabelecimentos levantados no Censo Agropecuário 2017 segundo a classficação FAO/INCRA quanto ao "Tipo de agricultor" e quanto ao "Tipo de Agricultura Familiar".
+
+Tabela 1 - Total de estabelecimentos, área total (em ha) e valores (em mil reais), segundo as variáveis selecionadas 
+Tabela 2 - Estabelecimentos e área por condição do produtor em relação às terras, segundo as variáveis selecionadas
+Tabela 3 - Pessoal ocupado na data de referência (30/09/2017), segundo as variáveis selecionadas
+Tabela 4 - Estabelecimentos por características tecnológicas/associativas, segundo as variáveis selecionadas			
+Tabela 5 - Estabelecimentos e valor de produção (em mil reais) de produtos selecionados, segundo as variáveis selecionadas - produção animal
+Tabela 6 - Estabelecimentos e área por grupos de tamanho (em hectare), segundo as variáveis selecionadas 
+Tabela 7 - Distribuição dos valores de investimento (em mil Reais) e indicadores de investimento, segundo as variáveis selecionadas
+Tabela 8 - Estabelecimentos e área por faixas de renda total, segundo as variáveis selecionadas
+Tabela 8 - Estabelecimentos e área por faixas de renda total, segundo as variáveis selecionadas
+Tabela 10 - Mão-de-obra familiar e contratada, segundo as variáveis selecionadas
+Tabela 11 - Estabelecimentos e área por grau de especialização, segundo as variáveis selecionadas
+Tabela 12 - Estabelecimentos e área por grau de integração ao mercado, segundo as variáveis selecionadas
+Tabela 13 - Estabelecimentos e área por formas de relações de trabalho, segundo as variáveis selecionadas
