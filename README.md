@@ -2,6 +2,7 @@
  Estágio-Mapeamento dos assentamentos humanos pré- e pós-colombianos na Amazônia
  
 DOWNLOAD DOS DADOS
+
 Dados
 •	Sítios Arqueológicos: assentamentos pré-colombianos fornecidos pela Amazon Arch.  Solicitar pelo e-mail:
 •	Endereços rurais atuais: utilizado para os assentamentos humanos pós-colombianos do Censo Agropecuário de 2017 do Brasil realizado pelo IBGE. Download: https://biblioteca.ibge.gov.br/index.php/biblioteca-catalogo?view=detalhes&id=73093 
