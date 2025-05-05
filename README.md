@@ -1,5 +1,6 @@
 # Mapeamento dos assentamentos humanos na Amazonia
  Estágio-Mapeamento dos assentamentos humanos pré- e pós-colombianos na Amazônia
+ 
 DOWNLOAD DOS DADOS
 Dados
 •	Sítios Arqueológicos: assentamentos pré-colombianos fornecidos pela Amazon Arch.  Solicitar pelo e-mail:
